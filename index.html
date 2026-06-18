@@ -197,7 +197,8 @@
 
   .fatima-sections {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    /* Changé à repeat(3, 1fr) car il y a exactement 3 cartes principales désormais */
+    grid-template-columns: repeat(3, 1fr);
     gap: 18px;
     padding: 0 8% 65px;
     background: #eef1f5;
@@ -223,6 +224,16 @@
   .fatima-card h2 i {
     color: #0b5cad;
     font-size: 23px;
+  }
+
+  /* Style additionnel pour les sous-titres de formation */
+  .fatima-card h3 {
+    font-size: 15px;
+    margin: 12px 0 4px 0;
+    color: #08285a;
+  }
+  .fatima-card h3:first-of-type {
+    margin-top: 0;
   }
 
   .fatima-card p,
@@ -293,14 +304,14 @@
     }
 
     .fatima-sections {
-      grid-template-columns: 1fr;
+      grid-template-columns: 1fr !important;
       padding: 0 6% 42px;
     }
   }
 
   @media (min-width: 901px) and (max-width: 1150px) {
     .fatima-sections {
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(2, 1fr) !important;
     }
   }
 </style>
@@ -310,7 +321,6 @@
     <div class="fatima-content">
       <div class="fatima-eyebrow">
         <i class="ti ti-school"></i>
-        
       </div>
 
       <h1 class="fatima-title">
@@ -320,11 +330,11 @@
 
       <p class="fatima-description">
         Professeure stagiaire en informatique au CRMEF de Marrakech, engagée dans
-          le développement de compétences pédagogiques et didactiques favorisant un
-          enseignement innovant et centré sur l'apprenant. Mon parcours universitaire
-          en informatique me permet de mobiliser des connaissances scientifiques et
-          technologiques au service de l'éducation et de l'intégration du numérique
-          dans les apprentissages.
+        le développement de compétences pédagogiques et didactiques favorisant un
+        enseignement innovant et centré sur l'apprenant. Mon parcours universitaire
+        en informatique me permet de mobiliser des connaissances scientifiques et
+        technologiques au service de l'éducation et de l'intégration du numérique
+        dans les apprentissages.
       </p>
 
       <div class="fatima-actions">
@@ -350,27 +360,28 @@
         <div class="fatima-ring"></div>
 
         <div class="fatima-portrait">
-          <!-- Remplacer PHOTO_URL_ICI par le lien public de votre photo -->
           <img src="photo-fatima-profile.jpeg" alt="Photo de Fatima Mazouz">
         </div>
 
         <div class="fatima-floating-card">
           <i class="ti ti-device-laptop"></i>
-          
         </div>
       </div>
     </div>
   </section>
 
   <section class="fatima-sections" id="profil-fatima">
+    
     <article class="fatima-card">
       <h2><i class="ti ti-id"></i> Informations</h2>
       <ul>
         <li>Professeure stagiaire au CRMEF de Marrakech</li>
         <li>Filière : Enseignement de l'informatique</li>
         <li>Cycle : Collégial</li>
- <h2><i class="ti ti-address-book"></i> Coordonnées</h2>
-<ul>
+      </ul>
+
+      <h2 style="margin-top: 24px;"><i class="ti ti-address-book"></i> Coordonnées</h2>
+      <ul>
         <li>E-mail : <a href="mailto:mazouzfatiimaa@gmail.com">mazouzfatiimaa@gmail.com</a></li>
         <li>LinkedIn : <a href="https://www.linkedin.com/in/fatima-mazouz-2a926025b" target="_blank" rel="noopener">fatima-mazouz-2a926025b</a></li>
         <li>Ville : Agadir, Maroc</li>
@@ -379,19 +390,20 @@
 
     <article class="fatima-card">
       <h2><i class="ti ti-certificate"></i> Formation</h2>
-      <ul>
-       <h3>Formation qualifiante des enseignants stagiaires</h3>
-            <p>CRMEF de Marrakech - 2025 - 2026</p>
- <h3>Licence d'Études Fondamentales</h3>
-            <p>Sciences Mathématiques et Informatique - Université Ibn Zohr - Agadir</p>
-<h3>DEUG - Sciences Mathématiques et Informatique</h3>
-            <p>Université Ibn Zohr - Agadir</p>
- <h3>Baccalauréat</h3>
-            <p>Sciences Mathématiques A</p>
-      </ul>
+      <div>
+        <h3>Formation qualifiante des enseignants stagiaires</h3>
+        <p>CRMEF de Marrakech - 2025 - 2026</p>
+        
+        <h3>Licence d'Études Fondamentales</h3>
+        <p>Sciences Mathématiques et Informatique - Université Ibn Zohr - Agadir</p>
+        
+        <h3>DEUG - Sciences Mathématiques et Informatique</h3>
+        <p>Université Ibn Zohr - Agadir</p>
+        
+        <h3>Baccalauréat</h3>
+        <p>Sciences Mathématiques A</p>
+      </div>
     </article>
-
-    
 
     <article class="fatima-card">
       <h2><i class="ti ti-tools"></i> Compétences</h2>
@@ -401,5 +413,6 @@
         <li>HTML, CSS, JavaScript et PHP</li>
       </ul>
     </article>
+
   </section>
 </main>
